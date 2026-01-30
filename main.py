@@ -10,6 +10,9 @@ st.set_page_config(
     layout="centered"
 )
 
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 st.title("🐱🐶 Cat or Dog Image Classifier")
 st.write("Envie uma imagem e o modelo irá identificar se é um **gato** ou **cachorro**.")
 
